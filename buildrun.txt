@@ -1,0 +1,9 @@
+docker build -t my_php .
+(20 secs)
+
+php -S localhost:8022
+
+PHPのビルトインサーバーを使用
+index.php(html)が開く(2024.05.10)
+
+http://localhost:8022
