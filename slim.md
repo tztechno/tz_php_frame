@@ -1,6 +1,9 @@
 
 ---
-
+```
+index.htmlの表示まではOK
+Ajax通信は失敗
+```
 ```
 cd myapp
 composer require slim/slim:"^4.0"
