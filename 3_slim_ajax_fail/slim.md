@@ -30,20 +30,8 @@ php -S localhost:8000 -t public
 myapp/
 ├── public/
 │   ├── index.html
-│   ├── images/
-│   │   └── logo.png
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
 ├── src/
-│   ├── dependencies/
-│   ├── middleware/
-│   ├── routes/
-│   └── templates/
 ├── vendor/
-├── composer.json
-├── composer.lock
 └── index.php
 ```
 
@@ -118,9 +106,11 @@ php -S localhost:8000 -t /path/to/myapp/public
 ブラウザで `http://localhost:8000` にアクセスして、Slimアプリケーションが正常に動作するか確認します。例では非常にシンプルなものですが、必要に応じてSlim Frameworkのルーティングやミドルウェアなどを追加して、より複雑なアプリケーションを構築できます。
 
 ---
+index.htmlはpublicの中
 
+```
 cd myapp
 php -S localhost:8000 -t public
 http://localhost:8000
-
+```
 ---
