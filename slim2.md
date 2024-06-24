@@ -9,8 +9,17 @@
 
 ---
 
-
-
+```
+myapp/
+├── public/             # Web公開されるファイル群（ドキュメントルート）
+│   ├── index.php       # Slimアプリケーションのエントリーポイント
+│   └── index.html      # メインのHTMLファイル
+├── vendor/             # Composerが生成するディレクトリ
+│   ├── autoload.php    # Composerのオートローダー
+│   └── (Slim関連の他の依存ライブラリなど)
+├── composer.json       # Composerの設定ファイル
+└── composer.lock       # Composerの依存関係のロックファイル
+```
 ---
 
 Slimフレームワークを使用して `myapp` というルートホルダにアプリケーションを作成し、index.htmlをホストする方法について説明します。
