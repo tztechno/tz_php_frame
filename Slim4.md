@@ -3,6 +3,19 @@
 ###
 
 ---
+```
+
+index.php,index,htmlはともにルートに置いた
+
+cd myapp
+
+php -S localhost:8080
+
+http://localhost:8080
+
+```
+
+---
 
 承知しました。このフロントエンドのHTMLとSlimフレームワークを使用してバックエンドを接続し、ルーカス数の計算と計算時間の測定を行うPHPスクリプトを作成します。
 
