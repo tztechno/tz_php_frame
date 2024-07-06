@@ -1,11 +1,11 @@
 
 
 ---
-html
+html: fetch('/calculate'
 ```
         function sendRequest() {
             const n = document.getElementById('inputN').value;
-            **fetch('/calculate', {**
+            fetch('/calculate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -23,20 +23,8 @@ html
 
 ```
 ---
-php
+php: post('/calculate'
 ```
-
-require __DIR__ . '/vendor/autoload.php';
-
-$app = AppFactory::create();
-
-// HTMLを表示するルート
-$app->get('/', function (Request $request, Response $response, $args) {
-    $response->getBody()->write(file_get_contents(__DIR__ . '/index.html'));
-    return $response;
-});
-
-// ルーカス数を計算するルート
 $app->post('/calculate', function (Request $request, Response $response, $args) {
     $data = json_decode($request->getBody(), true);
     $n = intval($data['n']);
@@ -44,7 +32,6 @@ $app->post('/calculate', function (Request $request, Response $response, $args) 
     $start_time = microtime(true);
     $result = calculateLucas($n);
     $end_time = microtime(true);
-
     $process_time = ($end_time - $start_time) * 1000; // ミリ秒に変換
 
     $response->getBody()->write(json_encode([
